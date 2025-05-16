@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LaptopRentalGUI"
+        xmlns:Classes="clr-namespace:LaptopRentalGUI.Classes"
         mc:Ignorable="d"
         Title="Laptop kölcsönzések" Height="350" Width="500">
     <Grid>
@@ -37,7 +38,14 @@
         <TextBlock Text="Laptop adatai" VerticalAlignment="Center"
                    FontSize="16" Margin="5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-        <Label Content="lista helye" Grid.Row="1"/>
+        <ListView Grid.Row="1" SelectionMode="Single"
+                  d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBlock Text="Laptop leltári szám" Margin="15 10 10 10" FontSize="15"/>
@@ -50,13 +58,14 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="2">
-            <TextBlock Text="a" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="b" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="c" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="d" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="e" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="f" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="g" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="Inv" Text="a" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="Mdl" Text="b" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="RAM" Text="c" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="Clr" Text="d" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="Dlf" Text="e" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="Dep" Text="f" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock x:Name="RtN" Text="g" Margin="15 10 10 10" FontSize="15"/>
         </StackPanel>
+        
     </Grid>
 </Window>
