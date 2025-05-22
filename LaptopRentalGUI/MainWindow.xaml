@@ -39,10 +39,10 @@
                    FontSize="16" Margin="5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
         <ListView Grid.Row="1" SelectionMode="Single"
-                  d:ItemsSource="{d:SampleData ItemCount=5}">
+                  >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Leltári szám" DisplayMemberBinding="{Binding}"/>
                 </GridView>
             </ListView.View>
         </ListView>
