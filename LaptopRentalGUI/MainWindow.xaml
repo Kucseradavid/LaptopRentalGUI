@@ -38,8 +38,8 @@
         <TextBlock Text="Laptop adatai" VerticalAlignment="Center"
                    FontSize="16" Margin="5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-        <ListView Grid.Row="1" SelectionMode="Single"
-                  >
+        <ListView Grid.Row="1" SelectionMode="Single" x:Name="LaptopListView"
+                  SelectionChanged="cuccnev">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Leltári szám" DisplayMemberBinding="{Binding}"/>
