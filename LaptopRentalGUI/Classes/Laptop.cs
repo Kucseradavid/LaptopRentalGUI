@@ -15,8 +15,9 @@ namespace LaptopRentalGUI.Classes
         public string Color { get; set; }
         public int DailyFee { get; set; }
         public int Deposit { get; set; }
+        public int NumberOfRents { get; set; }
 
-        public Laptop(string invnumber, string model, string country, int ram, string color, int dailyfee, int deposit)
+        public Laptop(string invnumber, string model, string country, int ram, string color, int dailyfee, int deposit, int numberofrents)
         {
             this.InvNumber = invnumber;
             this.Model = model;
@@ -25,9 +26,10 @@ namespace LaptopRentalGUI.Classes
             this.Color = color;
             this.DailyFee = dailyfee;
             this.Deposit = deposit;
+            this.NumberOfRents = numberofrents;
         }
 
-        public Laptop(string sor)
+        public Laptop(string sor, List<Rent> adatok)
         {
             string[] soradatok = sor.Split(";");
 
@@ -38,6 +40,15 @@ namespace LaptopRentalGUI.Classes
             this.Color = soradatok[10];
             this.DailyFee = Convert.ToInt32(soradatok[11]);
             this.Deposit = Convert.ToInt32(soradatok[12]);
+            int nor = 0;
+            foreach (Rent adat in adatok)
+            {
+                if (adat.Laptop.InvNumber == this.InvNumber)
+                {
+                    nor++;
+                }
+            }
+            this.NumberOfRents = nor;
         }
     }
 }

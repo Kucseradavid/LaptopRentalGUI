@@ -31,7 +31,7 @@ namespace LaptopRentalGUI.Classes
 
             Client szemely = new Client(soradatok[0], soradatok[1], Convert.ToDateTime(soradatok[2]), Convert.ToInt32(soradatok[3]), soradatok[4], soradatok[5]);
 
-            Laptop eszkoz = new Laptop(soradatok[6], soradatok[7], soradatok[8], Convert.ToInt32(soradatok[9]), soradatok[10], Convert.ToInt32(soradatok[11]), Convert.ToInt32(soradatok[12]));
+            Laptop eszkoz = new Laptop(soradatok[6], soradatok[7], soradatok[8], Convert.ToInt32(soradatok[9]), soradatok[10], Convert.ToInt32(soradatok[11]), Convert.ToInt32(soradatok[12]), 0);
 
             this.Client = szemely;
             this.Laptop = eszkoz;

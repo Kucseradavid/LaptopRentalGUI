@@ -38,8 +38,8 @@
         <TextBlock Text="Laptop adatai" VerticalAlignment="Center"
                    FontSize="16" Margin="5" Grid.Column="1" Grid.ColumnSpan="2"/>
 
-        <ListView Grid.Row="1" SelectionMode="Single" x:Name="LaptopListView"
-                  ><!--SelectionChanged="cuccnev"-->
+        <ListView Grid.Row="1" SelectionMode="Single" x:Name="LaptopListView" SelectionChanged="AdatMegjelenit"
+                  >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Leltári szám" DisplayMemberBinding="{Binding InvNumber}"/>
@@ -50,7 +50,7 @@
         <StackPanel Grid.Row="1" Grid.Column="1">
             <TextBlock Text="Laptop leltári szám" Margin="15 10 10 10" FontSize="15"/>
             <TextBlock Text="Model" Margin="15 10 10 10" FontSize="15"/>
-            <TextBlock Text="RAM (GB)" Margin="15 10 10 10" FontSize="15"/>
+            <TextBlock Text="RAM" Margin="15 10 10 10" FontSize="15"/>
             <TextBlock Text="Szín" Margin="15 10 10 10" FontSize="15"/>
             <TextBlock Text="Napi bérleti díj" Margin="15 10 10 10" FontSize="15"/>
             <TextBlock Text="Kaució" Margin="15 10 10 10" FontSize="15"/>
