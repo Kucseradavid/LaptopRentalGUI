@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LaptopRentalGUI.Classes;
+using System;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -10,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using LaptopRentalGUI.Classes;
 
 namespace LaptopRentalGUI
 {
@@ -60,6 +61,9 @@ namespace LaptopRentalGUI
             }
 
             LaptopListView.ItemsSource = laptopok;
+
+            ICollectionView view = CollectionViewSource.GetDefaultView(LaptopListView.ItemsSource);
+            view.SortDescriptions.Add(new SortDescription("InvNumber", ListSortDirection.Ascending));
 
             Inv.Text = "LTP000000";
             Mdl.Text = "Modell";
